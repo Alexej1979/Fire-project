@@ -38,12 +38,12 @@
 
      if ( $.cookie("UserId")=="")
       {
-          $(location).attr('href', "http://l.408dev.com/My_Work/index.html");              
+          $(location).attr('href', "http://l.408dev.com/Fire-project/index.html");              
       }
     if(window.location.search.toString().charAt(4)=="")
                 {
                     
-                    $(location).attr('href', "http://l.408dev.com/My_Work/project.html");
+                    $(location).attr('href', "http://l.408dev.com/Fire-project/project.html");
                 }
     </script>
     
@@ -626,6 +626,30 @@
   </section>
   <!-- container section end -->
     <!-- javascripts -->
+    
+    
+    <!-- модальное окно спецификации -->
+        
+<div id="modalSpecification" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Отсутствуют данные для составления спецификации</h4>
+      </div>
+      <div class="modal-body">
+      Нанесите на структурную схему приборы и извещатели и сохраните результат
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary returnToShema" data-dismiss="modal">ОК</button>       
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    
+    
+    
+    
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>        

@@ -84,7 +84,7 @@
                     var b = $(".password").val();
                     var a = $(".name").val();
                     
-                    $.post("http://l.408dev.com/My_Work/script.php", {name: a, password: b},"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
+                    $.post("http://l.408dev.com/Fire-project/script.php", {name: a, password: b},"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
                     .done(function(a) // done  - метод deffered объекта, который срабатывает когда Аджакс ответил не ошибкой (вместо старой записи "success: function (a)")
                         {
                                                         
@@ -93,7 +93,7 @@
                                     $.cookie('Name', $(".name").val()); 
                                     $.cookie('UserId', a.userID); 
                                     console.log("UserID="+$.cookie("UserId"));
-                                    $(location).attr('href', "http://l.408dev.com/My_Work/project.html");
+                                    $(location).attr('href', "http://l.408dev.com/Fire-project/project.html");
                                 }
 
                                 if(a.Error) // нет такого юзера

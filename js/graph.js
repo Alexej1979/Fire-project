@@ -9,7 +9,7 @@ $(function()
     var numberForPPK;        
             //-------- Забираем данные с сервера -------//
             
-          $.post("http://l.408dev.com/My_Work/script.php", load,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
+          $.post("http://l.408dev.com/Fire-project/script.php", load,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
           .done(function(a) // done  - метод deffered объекта, который срабатывает когда Аджакс ответил не ошибкой (вместо старой записи "success: function (a)")
               {   
               console.info(a.data[a.data.length-1])
@@ -138,23 +138,23 @@ $(function()
   $(".userNameFromCookie1").html($.cookie("Name"));
   $(".graphClick").on("click", function()
           {            
-              $(".graphClick").attr('href', "http://l.408dev.com/My_Work/graph.html?id="+window.location.search.toString().charAt(4));
+              $(".graphClick").attr('href', "http://l.408dev.com/Fire-project/graph.html?id="+window.location.search.toString().charAt(4));
           });
           
     $(".shemaClick").on("click", function()
     {            
-        $(".shemaClick").attr('href', "http://l.408dev.com/My_Work/shema.html?id="+window.location.search.toString().charAt(4));
+        $(".shemaClick").attr('href', "http://l.408dev.com/Fire-project/shema.html?id="+window.location.search.toString().charAt(4));
     });
     
     $(".projectClick").on("click", function()
     {   
       
-        $(".projectClick").attr('href', "http://l.408dev.com/My_Work/project.html?id="+window.location.search.toString().charAt(4));
+        $(".projectClick").attr('href', "http://l.408dev.com/Fire-project/project.html?id="+window.location.search.toString().charAt(4));
     });
     
     $(".specificationClick").on("click", function()
     {   
-        $(".specificationClick").attr('href', "http://l.408dev.com/My_Work/specification.html?id="+window.location.search.toString().charAt(4));
+        $(".specificationClick").attr('href', "http://l.408dev.com/Fire-project/specification.html?id="+window.location.search.toString().charAt(4));
     });
     
     $(".eborder-top").on("click", function()
@@ -163,7 +163,7 @@ $(function()
         
         $.cookie("Name", "");  
          $.cookie("UserId","");
-        $(location).attr('href', "http://l.408dev.com/My_Work/index.html");    
+        $(location).attr('href', "http://l.408dev.com/Fire-project/index.html");    
     });
     
     

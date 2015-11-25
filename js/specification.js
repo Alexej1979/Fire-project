@@ -8,9 +8,22 @@ $(function()
             };
                  //-------- Забираем данные с сервера -------//
                  
-    $.post("http://l.408dev.com/My_Work/script.php", load,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
+    $.post("http://l.408dev.com/Fire-project/script.php", load,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
           .done(function(a) // done  - метод deffered объекта, который срабатывает когда Аджакс ответил не ошибкой (вместо старой записи "success: function (a)")
               {   
+                   if ( a.data.length == 1) 
+                  {
+                     // $(".row").append($("<strong>").html("Добавьте элементы на структурной схеме и сохраните").css("padding-left","50px"));
+                      $('#modalSpecification').modal({"backdrop":"static"});
+                      $(".modal-dialog").css("left","0%");
+                      $(".returnToShema").on("click",function()
+                      {
+                          console.info("grt")
+                          $(location).attr('href', "http://l.408dev.com/Fire-project/shema.html?id="+window.location.search.toString().charAt(4));                          
+                          
+                      });
+                  }
+                  
                   console.log(a);  
                   //console.log(a.data);  
                 //  console.log(a.data[a.data.length-1].allPPK);
@@ -321,34 +334,36 @@ $(function()
                     numberSpecificationPribor=1;
                 }
 
-        
+    
+                  
   $(".userNameFromCookie1").html($.cookie("Name"));
   $(".graphClick").on("click", function()
           {            
-              $(".graphClick").attr('href', "http://l.408dev.com/My_Work/graph.html?id="+window.location.search.toString().charAt(4));
+              $(".graphClick").attr('href', "http://l.408dev.com/Fire-project/graph.html?id="+window.location.search.toString().charAt(4));
           });
           
     $(".shemaClick").on("click", function()
-    {            
-        $(".shemaClick").attr('href', "http://l.408dev.com/My_Work/shema.html?id="+window.location.search.toString().charAt(4));
+    {   
+       
+        $(".shemaClick").attr('href', "http://l.408dev.com/Fire-project/shema.html?id="+window.location.search.toString().charAt(4));
     });
     
     $(".projectClick").on("click", function()
     {   
         
-        $(".projectClick").attr('href', "http://l.408dev.com/My_Work/project.html?id="+window.location.search.toString().charAt(4));
+        $(".projectClick").attr('href', "http://l.408dev.com/Fire-project/project.html?id="+window.location.search.toString().charAt(4));
     });
     
     $(".specificationClick").on("click", function()
     {   
-        $(".specificationClick").attr('href', "http://l.408dev.com/My_Work/specification.html?id="+window.location.search.toString().charAt(4));
+        $(".specificationClick").attr('href', "http://l.408dev.com/Fire-project/specification.html?id="+window.location.search.toString().charAt(4));
     });
     
     $(".eborder-top").on("click", function()
     {
         $.cookie("UserId","");
         $.cookie("Name", "");        
-        $(location).attr('href', "http://l.408dev.com/My_Work/index.html");    
+        $(location).attr('href', "http://l.408dev.com/Fire-project/index.html");    
     });
     
 
@@ -356,7 +371,7 @@ $(function()
     projectData = makeProjectData();     - // создаем на дописываение на сервер информацию, которая пригодится в графиках: количество извещателей под однотипными приборами
     console.info(",,,,,")
     console.info(projectData);                            
-                               $.post("http://l.408dev.com/My_Work/script.php", projectData,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
+                               $.post("http://l.408dev.com/Fire-project/script.php", projectData,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
                                                                          .done(function(a) // done  - метод deffered объекта, который срабатывает когда Аджакс ответил не ошибкой (вместо старой записи "success: function (a)")
                                                                         {   
                                                                               console.log(a);                                                        
@@ -425,6 +440,8 @@ var titlePrj = ["КС ИВДЕЛЬСКОЕ ЛПУ", "КС ТОРБЕЕВСКАЯ
             var a = $(".panel-heading").html();
             $(".panel-heading").html(a+titlePrj[prj-1]);
         };
+        
+       
     
     }).fail(function() // fale - метод deffered объекта, который срабатывает когда Аджакс ответил ошибкой (вместо старой записи "error: function(){}")
               {                            

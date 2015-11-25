@@ -43,13 +43,13 @@
           
            $(".graphClick").on("click", function()
           {            
-              $(".graphClick").attr('href', "http://l.408dev.com/My_Work/graph.html?id="+window.location.search.toString().charAt(4));
+              $(".graphClick").attr('href', "http://l.408dev.com/Fire-project/graph.html?id="+window.location.search.toString().charAt(4));
           });
           
     $(".shemaClick").on("click", function()
     {      
         
-        $(".shemaClick").attr('href', "http://l.408dev.com/My_Work/shema.html?id="+window.location.search.toString().charAt(4));
+        $(".shemaClick").attr('href', "http://l.408dev.com/Fire-project/shema.html?id="+window.location.search.toString().charAt(4));
     });
     
     $(".projectClick").on("click", function()
@@ -57,18 +57,18 @@
         if (window.location.search.toString().charAt(4)!=="")
         {
            
-           $(".projectClick").attr('href', "http://l.408dev.com/My_Work/project.html?id="+window.location.search.toString().charAt(4));
+           $(".projectClick").attr('href', "http://l.408dev.com/Fire-project/project.html?id="+window.location.search.toString().charAt(4));
         }
         else
         {
           
-           $(".projectClick").attr('href', "http://l.408dev.com/My_Work/project.html");
+           $(".projectClick").attr('href', "http://l.408dev.com/Fire-project/project.html");
         }
     });
     
     $(".specificationClick").on("click", function()
     {   
-        $(".specificationClick").attr('href', "http://l.408dev.com/My_Work/specification.html?id="+window.location.search.toString().charAt(4));
+        $(".specificationClick").attr('href', "http://l.408dev.com/Fire-project/specification.html?id="+window.location.search.toString().charAt(4));
     });
           
           
@@ -344,7 +344,7 @@ $this4.css('transform', transformLayer);
         
         var i = $(this).data('offset');
         $.cookie('Project', i);       
-       $(location).attr('href', "http://l.408dev.com/My_Work/shema.html?id="+i);
+       $(location).attr('href', "http://l.408dev.com/Fire-project/shema.html?id="+i);
     });
     
     
@@ -355,7 +355,7 @@ $this4.css('transform', transformLayer);
     {        
         $.cookie("Name", ""); 
         $.cookie("UserId","");
-        $(location).attr('href', "http://l.408dev.com/My_Work/index.html");    
+        $(location).attr('href', "http://l.408dev.com/Fire-project/index.html");    
     });
     
     });

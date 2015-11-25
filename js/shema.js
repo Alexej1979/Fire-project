@@ -228,7 +228,7 @@
             };
                  //-------- Забираем данные с сервера и продолжаем работать на онлоаде когда есть положительный ответ с сервера -------//
                  
-          $.post("http://l.408dev.com/My_Work/script.php", load,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
+          $.post("http://l.408dev.com/Fire-project/script.php", load,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
           .done(function(a) // done  - метод deffered объекта, который срабатывает когда Аджакс ответил не ошибкой (вместо старой записи "success: function (a)")
               {   
                                                                        // TODO крутилка во время ожидания ответа сервака!
@@ -267,18 +267,18 @@
            
           $(".graphClick").on("click", function()
           {          
-              $(".graphClick").attr('href', "http://l.408dev.com/My_Work/graph.html?id="+prj);
+              $(".graphClick").attr('href', "http://l.408dev.com/Fire-project/graph.html?id="+prj);
           });
           
           $(".projectClick").on("click", function()
           {   
              
-              $(".projectClick").attr('href', "http://l.408dev.com/My_Work/project.html?id="+prj);
+              $(".projectClick").attr('href', "http://l.408dev.com/Fire-project/project.html?id="+prj);
           });
           
           $(".specificationClick").on("click", function()
           {                 
-              $(".specificationClick").attr('href', "http://l.408dev.com/My_Work/specification.html?id="+prj);
+              $(".specificationClick").attr('href', "http://l.408dev.com/Fire-project/specification.html?id="+prj);
           });
           
           
@@ -344,7 +344,7 @@
                                 lengthShleif = 0;
                                 projectData = makeProjectData();    
                                 
-                                $.post("http://l.408dev.com/My_Work/script.php", projectData,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
+                                $.post("http://l.408dev.com/Fire-project/script.php", projectData,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
                                                                          .done(function(a) // done  - метод deffered объекта, который срабатывает когда Аджакс ответил не ошибкой (вместо старой записи "success: function (a)")
                                                                         {   
                                                                             //  console.log(a);                                                        
@@ -369,7 +369,7 @@
                         
                         projectData = makeProjectData();    
                                 
-                                $.post("http://l.408dev.com/My_Work/script.php", projectData,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
+                                $.post("http://l.408dev.com/Fire-project/script.php", projectData,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
                                                                          .done(function(a) // done  - метод deffered объекта, который срабатывает когда Аджакс ответил не ошибкой (вместо старой записи "success: function (a)")
                                                                         {   
                                                                             //  console.log(a);                                                        
@@ -405,7 +405,7 @@
         {
         $.cookie("Name", "");  
          $.cookie("UserId","");
-        $(location).attr('href', "http://l.408dev.com/My_Work/index.html");    
+        $(location).attr('href', "http://l.408dev.com/Fire-project/index.html");    
     });    
     });
     

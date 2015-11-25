@@ -62,7 +62,7 @@
 } 
 .layer-1
     {
-       @include layer (url("/My_Work/img/gazprom.jpg"));
+       @include layer (url("/Fire-project/img/gazprom.jpg"));
       span 
       { 
         @include span; 
@@ -79,7 +79,7 @@
 } 
 .layer-2
     {
-       @include layer (url("/My_Work/img/gazprom2.jpg"));
+       @include layer (url("/Fire-project/img/gazprom2.jpg"));
 
       span 
       { 
@@ -97,7 +97,7 @@
 } 
 .layer-3
     {
-       @include layer (url("/My_Work/img/gazprom3.jpg"));
+       @include layer (url("/Fire-project/img/gazprom3.jpg"));
 
       span 
       { 
@@ -115,7 +115,7 @@
 } 
 .layer-4
     {
-       @include layer (url("/My_Work/img/gazprom4.jpg"));
+       @include layer (url("/Fire-project/img/gazprom4.jpg"));
       span 
       { 
         @include span; 
