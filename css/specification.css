@@ -1,0 +1,27 @@
+.sidebar-menu a, .eborder-top {
+  cursor: pointer; }
+
+.panel-heading {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px !important; }
+
+.trStyle {
+  border-bottom: 2px solid gray; }
+
+.table {
+  border: 2px solid gray !important;
+  font-style: oblique; }
+
+.trStyle > th {
+  text-align: center; }
+
+.trStyle th:first-child {
+  width: 1%; }
+
+.headingStyle {
+  box-shadow: none !important;
+  border-left: none !important;
+  border-right: none !important; }
+
+/*# sourceMappingURL=specification.css.map */

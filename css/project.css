@@ -1,0 +1,156 @@
+.sidebar-menu a, .eborder-top {
+  cursor: pointer; }
+
+.poster1 {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  box-shadow: 0 45px 100px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin-bottom: 10px;
+  cursor: pointer; }
+
+.shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100; }
+
+.layer-1 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background-size: 100% auto;
+  background-image: url("/My_Work/img/gazprom.jpg"); }
+  .layer-1 span {
+    font-size: 30px;
+    color: #8c4a4a;
+    font-family: fantasy;
+    margin-left: 10px; }
+
+.poster2 {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  box-shadow: 0 45px 100px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin-bottom: 10px;
+  cursor: pointer; }
+
+.shine2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100; }
+
+.layer-2 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background-size: 100% auto;
+  background-image: url("/My_Work/img/gazprom2.jpg"); }
+  .layer-2 span {
+    font-size: 30px;
+    color: #8c4a4a;
+    font-family: fantasy;
+    margin-left: 10px; }
+
+.poster3 {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  box-shadow: 0 45px 100px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin-bottom: 10px;
+  cursor: pointer; }
+
+.shine3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100; }
+
+.layer-3 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background-size: 100% auto;
+  background-image: url("/My_Work/img/gazprom3.jpg"); }
+  .layer-3 span {
+    font-size: 30px;
+    color: #8c4a4a;
+    font-family: fantasy;
+    margin-left: 10px; }
+
+.poster4 {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  box-shadow: 0 45px 100px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin-bottom: 10px;
+  cursor: pointer; }
+
+.shine4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100; }
+
+.layer-4 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background-size: 100% auto;
+  background-image: url("/My_Work/img/gazprom4.jpg"); }
+  .layer-4 span {
+    font-size: 30px;
+    color: #8c4a4a;
+    font-family: fantasy;
+    margin-left: 10px; }
+
+/*# sourceMappingURL=project.css.map */

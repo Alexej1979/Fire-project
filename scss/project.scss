@@ -1,0 +1,123 @@
+.sidebar-menu a, .eborder-top
+{
+    cursor:pointer;
+} 
+
+@mixin poster
+{
+    width: 100%;
+    height: 180px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 45px 100px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    margin-bottom: 10px;
+    cursor:pointer;
+}
+
+@mixin shine
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //background: -webkit-linear-gradient(315deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 60%);
+  //background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 60%);
+  z-index: 100;
+}
+
+@mixin layer ($img) 
+{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;  
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    background-size: 100% auto; 
+    background-image: $img;
+}
+
+@mixin span 
+{
+  font-size: 30px;
+  color: rgb(140, 74, 74);
+  font-family: fantasy;
+  margin-left: 10px; 
+}
+// ---------------Shine  Picture 1 ----------------//
+.poster1
+{
+    @include poster;    
+}
+.shine 
+{
+  @include shine;
+} 
+.layer-1
+    {
+       @include layer (url("/My_Work/img/gazprom.jpg"));
+      span 
+      { 
+        @include span; 
+      } 
+    }
+// ---------------Shine  Picture 2 ----------------//
+.poster2
+{
+    @include poster;    
+}
+.shine2 
+{
+  @include shine;
+} 
+.layer-2
+    {
+       @include layer (url("/My_Work/img/gazprom2.jpg"));
+
+      span 
+      { 
+        @include span; 
+      } 
+    }
+// ---------------Shine  Picture 3 ----------------//
+.poster3
+{
+    @include poster;    
+}
+.shine3 
+{
+  @include shine;
+} 
+.layer-3
+    {
+       @include layer (url("/My_Work/img/gazprom3.jpg"));
+
+      span 
+      { 
+        @include span; 
+      } 
+    }
+// ---------------Shine  Picture 4 ----------------//
+.poster4
+{
+    @include poster;    
+}
+.shine4 
+{
+  @include shine;
+} 
+.layer-4
+    {
+       @include layer (url("/My_Work/img/gazprom4.jpg"));
+      span 
+      { 
+        @include span; 
+      } 
+    }

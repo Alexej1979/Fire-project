@@ -1,0 +1,83 @@
+@charset "UTF-8";
+.imageScheme {
+  height: 500px;
+  background: url(http://4sport.ua/_upl/2/1440/2.jpg) no-repeat;
+  background-size: 100% 80%; }
+
+.draggable, .draggable1, .draggable2, .draggable3, .draggable4 {
+  position: absolute;
+  z-index: 2;
+  height: 20px; }
+
+.emptySpace {
+  border: medium dotted red;
+  height: 36px;
+  margin: 4px; }
+
+.sidebar-menu a, .eborder-top {
+  cursor: pointer; }
+
+.BTH, .BTF, .BTK, .BTM, .PPK {
+  position: absolute;
+  top: -10px; }
+  .BTH img, .BTF img, .BTK img, .BTM img, .PPK img {
+    height: 40px; }
+
+.styleForm {
+  background-color: #34aadc;
+  color: white;
+  border-color: #34aadc; }
+
+.styleForm:focus {
+  color: white; }
+
+.exit > a:hover {
+  color: red !important;
+  /* ╨ж╨▓╨╡╤В ╤Б╤Б╤Л╨╗╨║╨╕ */
+  background-color: #394a59; }
+
+.exit > a {
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  color: white;
+  background-color: #394a59; }
+
+.exit > a > i {
+  padding-right: 10px; }
+
+.logout {
+  background: white !important;
+  margin-top: 3px; }
+
+.dropdown-menu.extended.logout > li.eborder-top {
+  border-top: none !important; }
+
+.prybor, .shleif {
+  width: 173px; }
+
+.input-group-addon {
+  color: #8e8e93; }
+
+.paddingRow {
+  padding-top: 30px !important; }
+
+.posInput {
+  top: -5px; }
+
+.spanTitle {
+  position: absolute;
+  top: 65px;
+  font-weight: bold; }
+
+.borderElement {
+  border: 1px solid #ccc;
+  height: 65px;
+  margin-left: 15px;
+  margin-top: -12px;
+  padding-top: 10px;
+  background-color: #FBEFEB; }
+
+.borderElement > div {
+  margin-left: 30px; }
+
+/*# sourceMappingURL=My_Work_style.css.map */
