@@ -247,7 +247,7 @@ $(function()
                                                         .append($("<td>").html(" "))
                                                        )
                                         
-                    }
+                    } 
                 }   
                             
                 for (var w = 0; w<specificationBTKSumm.length; w++)                 // снова бегаем по массиву данных
@@ -312,14 +312,7 @@ $(function()
                $(".styleHtml").css("padding-left","50px");    // делаем отступы для извещателей
               
               
-    $('tr').each(function()                                      // выравнивание колонок в таблице (кроме двух первых)
-    {
-        for (var ii = 2; ii<7;ii++)
-        {
-           this.cells[ii].style.textAlign = 'center';       
-       }   
-       
-    });
+  
     
     
         var numberSpecificationPribor = 1;   
@@ -334,6 +327,42 @@ $(function()
                     numberSpecificationPribor=1;
                 }
 
+
+    projectData = makeProjectData();     - // создаем на дописываение на сервер информацию, которая пригодится в графиках: количество извещателей под однотипными приборами
+    console.info(_.sum(projectData.projectData[projectData.projectData.length-1].sumBTH)); 
+    
+    var sumNumberShleif =_.sum(projectData.projectData[projectData.projectData.length-1].sumBTH)+ //считаем к-во извещателей ИТОГО для длинны шлейфа
+            _.sum(projectData.projectData[projectData.projectData.length-1].sumBTM)+
+            _.sum(projectData.projectData[projectData.projectData.length-1].sumBTF)+
+            _.sum(projectData.projectData[projectData.projectData.length-1].sumBTK);
+    
+              
+              //-- Рисуем шлейф --// 
+    
+    
+    $("tbody")
+            .append($("<tr>").attr("data-Sleif",a.data[a.data.length-1].lengthShleif)
+            .append($("<td>").html(a.data[i].numberElement))
+            .append($("<td>").html("Кабель универсальный огнестойкий с медными жилами экранированный").css("color","midnightblue"))
+            .append($("<td>").html(a.data[i].selectPribor))
+            .append($("<td>").addClass("newNamePPK").html("КУИН нг (А)-FRLS 2x1,5 ПсЭ"))
+            .append($("<td>").html("НПП «Герда» г. Москва"))
+            .append($("<td>").html("м"))
+            .append($("<td>").html(+a.data[a.data.length-1].lengthSleif + ((+sumNumberShleif)*3)))
+            .append($("<td>").html(" "))                    );
+    
+    
+    
+    
+      $('tr').each(function()                                      // выравнивание колонок в таблице (кроме двух первых)
+    {
+        for (var ii = 2; ii<7;ii++)
+        {
+           this.cells[ii].style.textAlign = 'center';       
+       }   
+       
+    });
+    
     
                   
   $(".userNameFromCookie1").html($.cookie("Name"));
@@ -368,9 +397,8 @@ $(function()
     
 
     console.info(specificationBTHSumm)
-    projectData = makeProjectData();     - // создаем на дописываение на сервер информацию, которая пригодится в графиках: количество извещателей под однотипными приборами
     console.info(",,,,,")
-    console.info(projectData);                            
+                               
                                $.post("http://l.408dev.com/Fire-project/script.php", projectData,"","json") // $post  - короткая запись работы с Аджаксом, передаем скрипт, данные, пустую строку (потому что мы с succes работаем отдельно и формат данных)
                                                                          .done(function(a) // done  - метод deffered объекта, который срабатывает когда Аджакс ответил не ошибкой (вместо старой записи "success: function (a)")
                                                                         {   

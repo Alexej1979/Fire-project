@@ -334,10 +334,14 @@
                     {
                       if ($("#exampleInputAmount").val()=="" || $("#exampleInputAmount").val()=="0" )                          // если количество шлейфа не введено
                         {
-                            $("body").append(buildModal("Введите длину шлейфа!","Ошибка длинны шлейфа",4));
-                            $('#Modal4').modal({"backdrop":"static"});
+                            //$("body").append(buildModal("Введите длину шлейфа!","Ошибка длинны шлейфа",4));
+                            
+                            $('#modalShleif').modal({"backdrop":"static"});
+                            $(".modalShleif1").css(
+                                                            {"position":"absolute",
+                                                            "left": "15px"});
                        
-                            $(".cancelChange").on("click", function()                   // кнопка Нет, на вводе количества шлейфа
+                            $(".modalShleif1").on("click", function()                   // кнопка Нет, на вводе количества шлейфа
                             {
                           
                                 $("#exampleInputAmount").val("0");                                     // устанавливаем длину шлейфа
