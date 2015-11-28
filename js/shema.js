@@ -232,7 +232,8 @@
           .done(function(a) // done  - метод deffered объекта, который срабатывает когда Аджакс ответил не ошибкой (вместо старой записи "success: function (a)")
               {   
                                                                        // TODO крутилка во время ожидания ответа сервака!
-              
+              console.info(a.data[a.data.length-1].lengthSleif);
+              $("#exampleInputAmount").attr("placeholder",a.data[a.data.length-1].lengthSleif);
               if (a.data.length==0)
                   
               {     

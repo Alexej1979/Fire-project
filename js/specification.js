@@ -339,19 +339,35 @@ $(function()
               
               //-- Рисуем шлейф --// 
     
+    if (a.data[a.data.length-1].lengthSleif >0)
+    {
+        $("tbody")
+                .append($("<tr>").attr("data-Sleif",a.data[a.data.length-1].lengthShleif)
+                .append($("<td>").html(a.data[i].numberElement))
+                .append($("<td>").html("Кабель универсальный огнестойкий с медными жилами экранированный").css("color","midnightblue"))
+                .append($("<td>").html(a.data[i].selectPribor))
+                .append($("<td>").addClass("newNamePPK").html("КУИН нг (А)-FRLS 2x1,5 ПсЭ"))
+                .append($("<td>").html("НПП «Герда» г. Москва"))
+                .append($("<td>").html("м"))
+                .append($("<td>").html(a.data[a.data.length-1].lengthSleif))
+                .append($("<td>").html(" "))       
+                );
+    };
     
-    $("tbody")
-            .append($("<tr>").attr("data-Sleif",a.data[a.data.length-1].lengthShleif)
-            .append($("<td>").html(a.data[i].numberElement))
-            .append($("<td>").html("Кабель универсальный огнестойкий с медными жилами экранированный").css("color","midnightblue"))
-            .append($("<td>").html(a.data[i].selectPribor))
-            .append($("<td>").addClass("newNamePPK").html("КУИН нг (А)-FRLS 2x1,5 ПсЭ"))
-            .append($("<td>").html("НПП «Герда» г. Москва"))
-            .append($("<td>").html("м"))
-            .append($("<td>").html(+a.data[a.data.length-1].lengthSleif + ((+sumNumberShleif)*3)))
-            .append($("<td>").html(" "))                    );
-    
-    
+    if (a.data[a.data.length-1].allNamePPK.length>1)
+    {
+        $("tbody")
+                .append($("<tr>").attr("data-Sleif",a.data[a.data.length-1].lengthShleif)
+                .append($("<td>").html(a.data[i].numberElement))
+                .append($("<td>").html("Кабель симметричный для интерфейса RS-485").css("color","midnightblue"))
+                .append($("<td>").html(a.data[i].selectPribor))
+                .append($("<td>").addClass("newNamePPK").html("КИПнг(А)-FRLS 1,0х2х1,0"))
+                .append($("<td>").html("НПП «Герда» г. Москва"))
+                .append($("<td>").html("м"))
+                .append($("<td>").html((+a.data[a.data.length-1].allNamePPK.length)*10))
+                .append($("<td>").html(" ")) 
+                );
+    };  
     
     
       $('tr').each(function()                                      // выравнивание колонок в таблице (кроме двух первых)
@@ -388,13 +404,38 @@ $(function()
         $(".specificationClick").attr('href', "http://l.408dev.com/Fire-project/specification.html?id="+window.location.search.toString().charAt(4));
     });
     
-    $(".eborder-top").on("click", function()
+    $(".toIndex").on("click", function()
     {
         $.cookie("UserId","");
         $.cookie("Name", "");        
         $(location).attr('href', "http://l.408dev.com/Fire-project/index.html");    
     });
     
+    $(".toPrint").on("click", function()
+    {   
+        $("td").css
+        ({
+            "border-bottom":"1px solid gray",
+            "border-right":"1px solid lightgray"
+        });
+                
+        $("th").css
+        ({
+            "border-bottom":"1px solid gray",
+            "border-right":"1px solid gray",
+            "border-top":"1px solid gray"            
+        });        
+        w=window.open();
+        w.document.write($('#main-content').html());
+        w.print();
+        w.close();
+        $("td").css
+        ({
+            "border-bottom":"1px solid #dddddd",
+            "border-right":"1px solid #dddddd"
+        });      
+    
+    });
 
     console.info(specificationBTHSumm)
     console.info(",,,,,")
