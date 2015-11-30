@@ -121,3 +121,26 @@
         @include span; 
       } 
     }
+
+    
+    .exit>a:hover
+ {
+   // background: blue !important; /* Цвет фона под ссылкой */ 
+ //   background-color: blue !important;
+      color: red !important;/* Цвет ссылки */ 
+      //background: #2e3b46 !important;
+      background-color: #394a59;
+} 
+
+.exit>a
+{
+    text-transform: uppercase !important;
+    font-size: 14px !important;
+    color: white;
+    background-color: #394a59;
+}
+
+.exit>a>i
+{
+    padding-right: 10px;
+}

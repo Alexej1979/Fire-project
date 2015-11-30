@@ -157,14 +157,24 @@ $(function()
         $(".specificationClick").attr('href', "http://l.408dev.com/Fire-project/specification.html?id="+window.location.search.toString().charAt(4));
     });
     
-    $(".eborder-top").on("click", function()
+        $(".toIndex").on("click", function()
     {
-        
-        
-        $.cookie("Name", "");  
-         $.cookie("UserId","");
+        $.cookie("UserId","");
+        $.cookie("Name", "");        
         $(location).attr('href', "http://l.408dev.com/Fire-project/index.html");    
     });
+    
+    $(".toPrint").on("click", function()
+    {   
+               
+        w=window.open();
+        w.document.write($('.row').html());
+        w.print();
+        w.close();
+             
+    
+    });
+
     
     
     

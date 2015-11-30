@@ -72,7 +72,7 @@
     });
           
           
-          
+       
           
             
             //-------------- picture on Project 1 --------//
@@ -115,6 +115,66 @@ $this.css('transform', transformLayer);
 });
 
 });   
+
+ //-------------- tooltips on picture project --------//
+           
+           $('.poster1').poshytip
+           ({ 
+               followCursor: true,
+               slide: false,
+               content: function(updateCallback) 
+               {
+                   window.setTimeout(function()
+                   {
+                       updateCallback('КС ИВДЕЛЬСКОЕ ЛПУ');
+                   }, 1000);
+                   return 'Проект....';
+               }
+           });
+           
+           
+            $('.poster2').poshytip
+           ({ 
+               followCursor: true,
+               slide: false,
+               content: function(updateCallback) 
+               {
+                   window.setTimeout(function()
+                   {
+                       updateCallback('КС ТОРБЕЕВСКАЯ');
+                   }, 1000);
+                   return 'Проект....';
+               }
+           });
+           
+           $('.poster3').poshytip
+           ({ 
+               followCursor: true,
+               slide: false,
+               content: function(updateCallback) 
+               {
+                   window.setTimeout(function()
+                   {
+                       updateCallback('ГРС МОСТРАНСГАЗ');
+                   }, 1000);
+                   return 'Проект....';
+               }
+           });   
+
+           $('.poster4').poshytip
+           ({ 
+               followCursor: true,
+               slide: false,
+               content: function(updateCallback) 
+               {
+                   window.setTimeout(function()
+                   {
+                       updateCallback('КУЩЕВСКОЕ ПХГ');
+                   }, 1000);
+                   return 'Проект....';
+               }
+           });  
+          
 
 $('.poster').on('mouseleave', function() 
 {
@@ -351,10 +411,10 @@ $this4.css('transform', transformLayer);
     /* ---------- Account Exit ---------- */
     
     $(".eborder-top>a").css("cursor","pointer");
-    $(".eborder-top").on("click", function()
-    {        
-        $.cookie("Name", ""); 
+    $(".toIndex").on("click", function()
+    {
         $.cookie("UserId","");
+        $.cookie("Name", "");        
         $(location).attr('href', "http://l.408dev.com/Fire-project/index.html");    
     });
     

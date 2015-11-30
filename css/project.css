@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .sidebar-menu a, .eborder-top {
   cursor: pointer; }
 
@@ -152,5 +153,19 @@
     color: #8c4a4a;
     font-family: fantasy;
     margin-left: 10px; }
+
+.exit > a:hover {
+  color: red !important;
+  /* ╨ж╨▓╨╡╤В ╤Б╤Б╤Л╨╗╨║╨╕ */
+  background-color: #394a59; }
+
+.exit > a {
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  color: white;
+  background-color: #394a59; }
+
+.exit > a > i {
+  padding-right: 10px; }
 
 /*# sourceMappingURL=project.css.map */
